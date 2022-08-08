@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Chat app css illustration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .js{
+      visibility: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    document.getElementsByTagName('html')[0].classList.add('js');
+  </script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <section class="container">
+    <main>
+      <section class="chat__app__illustration">
+        <div class="chat__app__illustration__inner">
+          <header>
+            <button class="btn"> &lsaquo; </button>
+            <div class="profile">
+              <img src="images/avatar.jpg" alt="" class="avatar">
+              <div class="profile__details">
+                <h2 class="profile__name">Samuel Green</h2>
+                <small class="profile__status">Available to Walk</small>
+              </div>
+            </div>
+            <button class="btn v-ellipsis">&vellip;</button>
+          </header>
+          <section class="chat__body js__chat__body">
+            <section class="chat js__chat">
+              <p class="chat__msg chat__msg--incoming">That sounds great. I’d be happy with that.</p>
+              <p class="chat__msg chat__msg--incoming">Could you send over some pictures of your dog, please?</p>
+    
+              <p class="chat__msg chat__msg--send chat__msg--send-flex">
+                <img src="images/dog-image-1.jpg" alt="" class="dogImage">
+                <img src="images/dog-image-2.jpg" alt="" class="dogImage">
+                <img src="images/dog-image-3.jpg" alt="" class="dogImage">
+              </p>
+              <p class="chat__msg chat__msg--send">Here are a few pictures. She’s a happy girl!</p>
+              <p class="chat__msg chat__msg--send">Can you make it?</p>
+    
+              <p class="chat__msg chat__msg--incoming">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+              <p class="chat__msg chat__msg--incoming incoming--poll">
+                <span class="radio__btn"></span>
+                <span class="content">30 minute walk</span>
+                <span class="amount">$29</span>
+              </p>
+              <p class="chat__msg chat__msg--incoming incoming--poll">
+                <span class="radio__btn"></span>
+                <span class="content">1 hour walk</span>
+                <span class="amount">$49</span>
+              </p>
+            </section>
+            <section class="form js__form">
+              <form action="#">
+                <div class="form__group">
+                  <label for="msg"></label>
+                  <input type="text" name="msg" id="msg" placeholder="Type a message…" class="form__control">
+                </div>
+                <button class="btn--submit"><span>›</span></button>
+              </form>
+            </section>
+          </section>
+        </div>
+      </section>
+      <section class="description js__description">
+        <h1 class="title">Simple booking</h1>
+        <p class="description__text">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
+        </p>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/alfredthompsonovie/" target="_blank">Alfred Thompson <i><span class="m">O</span><span class="m">v</span><span class="m">i</span><span class="m">e</span></i></a>.
+    </footer>
+
+  </section>
+  <script>
+    window.onload = ()=>{
+      document.getElementsByTagName('html')[0].classList.remove('js');
+    }
+  </script>
+</body>
+</html>
