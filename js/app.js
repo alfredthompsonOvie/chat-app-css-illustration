@@ -1,6 +1,5 @@
 "use strict";
 function init() {
-  
   const tl = gsap.timeline({
     defaults: {
       duration: 2,
@@ -30,10 +29,20 @@ function init() {
   });
   
   tl
+  .from("body", {
+    autoAlpha: 0,
+  })
+    .fromTo(".container", {
+      autoAlpha: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)"
+    }, {
+      autoAlpha: 1,
+      duration: 2,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+    })
     .from(".chat__app__illustration", {
       x: 100,
       autoAlpha: 0,
-      duration: 1.5,
       ease: "back"
     })
     .from(".js__chat__body", {
@@ -43,25 +52,21 @@ function init() {
       y: 10,
       autoAlpha: 0,
       stagger: .3,
-      // duration: 2,
       ease: "back"
     })
     .from(".js__form", {
       autoAlpha: 0,
-      // duration: 2,
       ease: "power4"
     })
     .from(".js__description > *", {
       y: 10,
       autoAlpha: 0,
       stagger: .3,
-      // duration: 2,
       ease: "back"
     }, "-=1.5")
     .from(".attribution", {
       x: -10,
       autoAlpha: 0,
-      // stagger: .3,
       duration: 1.5,
       ease: "back"
     }, "-=.5")
